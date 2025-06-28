@@ -1,0 +1,125 @@
+
+
+                              HI-PRECISION                                    diagnostics 
+                 HP           ONLINE                      RESULT 
+
+Name        : EATA, SIEGFRIED MANUEL REQUILME                                 Lab. Number        : 2553047745 
+PID         : CW4169126                                                       Birthdate          : 08-10-1966 
+Age         : 58               Sex : MALE                                     Dispatch           : 
+Source      : HPD-DIAMOND (WALK-IN)                                           Page              : 1 of 3 
+Clinician : DR. ASRI G. PIDOR 
+
+Date Requested        04-30-2025 06:04 AM                                       Received : 04-30-2025 07:50 AM 
+
+ Test                                         Results                         Unit                Reference Interval 
+
+ HEMATOLOGY 
+ Complete Blood Count 
+    White Blood Cells                         6.0                              10^9/L             4.00~10.50 
+    Red Blood Cells                           4.43                             10^12/L            4.70~6.00 
+    Hemoglobin                                 147                            g/L                 135~180 
+    Hematocrit                                 0.41                                               0.42~0.52 
+    Mean Corpuscular Volume                   93                              fL                  78~100 
+    Mean Corpuscular Hb                       33                              pg                  27~31 
+    Mean Corpuscular Hb Conc.                 0.36                                                0.32~0.36 
+    RBC Distribution Width                     12.2                            %                  11.0~16.0 
+    Platelet Count                            238                              10^9/L             150~450 
+    Diff. Count (Relative) 
+     Segmenters / Neutrophils                 66.1                             %                  50.0~70.0 
+     Lymphocytes                              23.0                             %                  18.0~42.0 
+     Monocytes                                6.6                              %                  2.0~11.0 
+     Eosinophils                              3.1                              %                  0.0~6.0 
+     Basophils                                 1.2                             %                  0.0~2.0 
+     Bands                                    0.0                              %                  0.0~5.0 
+    Diff. Count (Absolute) 
+     Absolute Seg/Neutro Count                3.97                             10^9/L             1.30~6.00 
+     Absolute Lymphocyte Count                 1.38                            10^9/L             1.50~3.50 
+     Absolute Monocyte Count                  0.40                             10^9/L             <1.00 
+     Absolute Eosinophil Count                0.19                             10^9/L             <0.70 
+     Absolute Basophil Count                  0.07                             10^9/L             <0.40 
+     Absolute Band Count                      0.00                             10^9/L             <1.0 
+
+       LEGEND:           - High       11 - Alert Value High                - Low           - Alert Value Low 
+
+                            HM:          gr 
+                                     KYSHA P. ACOSTA, RMT                               MA. LHYNDY M. DAÑO     GRACE JOY &. AVILA, M. D. , FPSP 
+                                      LIC. #: 0111915                                    LIC. #: 0110162     PTR:1987810 , LIC. #: 0091151, CTC:11273706 
+                   REGISTERED MEDICAL TECHNOLOGIST                                 QUALITY CONTROL             PATHOLOGIST 
+                                                ** Report Electronically Signed Out ** 
+                                                               HPD 
+<<<
+
+                                HI-PRECISION                                      diagnostics 
+                                ONLINE                       RESULT 
+
+Name         : EATA, SIEGFRIED MANUEL REQUILME                                    Lab. Number          2553047745 
+PID          : CW4169126                                                          Birthdate           : 08-10-1966 
+Age          : 58                Sex : MALE                                       Dispatch            : 
+Source       : HPD-DIAMOND (WALK-IN)                                              Page                : 2 of 3 
+Clinician : DR. ASRI G. PIDOR 
+
+Date Requested         04-30-2025 06:04 AM                                          Received : 04-30-2025 07:50 AM 
+
+                                                           Conventional                                        SI 
+    TEST                                         RESULT      UNIT        Reference Interval     RESULT        UNIT      Reference Interval 
+
+    HbA1c (IE-HPLC)                              4.70        %           Normal: <              4.70          %         Normal: 
+                                                                         Pre-diabetes:                                  <5.70% 
+                                                                         5.70%~6.40%                                    Pre-diabetes: 
+                                                                         Diabetes: >/=                                  5.70%~6.40% 
+                                                                         6.50%                                          Diabetes: >/= 
+                                                                                                                        6.50% 
+
+        LEGEND:           - High        11 - Alert Value High                 - Low             - Alert Value Low 
+
+                              HM:          gr 
+                                       KYSHA P. ACOSTA, RMT                                 MA. LHYNDY M. DAÑO      GRACE JOY AVILA, M. D. , FPSP 
+                                         LIC. #: 0111915                                      LIC. #: 0110162      PTR:1987810 , LIC. #: 0091151, CTC: 11273706 
+                    REGISTERED MEDICAL TECHNOLOGIST                                    QUALITY CONTROL               PATHOLOGIST 
+                                                  ** Report Electronically Signed Out ** 
+                                                                   HPD 
+<<<
+
+                                 HI-PRECISION                                         diagnostics 
+                                 ONLINE                         RESULT 
+
+Name         : EATA, SIEGFRIED MANUEL REQUILME                                        Lab. Number          : 2553047745 
+PID          : CW4169126                                                              Birthdate            : 08-10-1966 
+Age          : 58                 Sex : MALE                                           Dispatch            : 
+Source      : HPD-DIAMOND (WALK-IN)                                                   Page                 : 3 of 3 
+Clinician : DR. ASRI G. PIDOR 
+
+Date Requested        : 04-30-2025 06:04 AM                                              Received : 04-30-2025 07:50 AM 
+
+                                                             Conventional                                            SI 
+   TEST                                            RESULT       UNIT         Reference Interval      RESULT         UNIT      Reference Interval 
+
+   CHEMISTRY 
+   eGFR CKD-EPI (2021)                          + 48                         ml/min/1.73m2 
+   Fasting Blood Sugar                             101.34       mg/dl        70~100                  5.61           mmol/L 3.88~5.54 
+   Creatinine                                      1.64         mg/dl        0.60~1.20               144.98         umol/L 53.04~106.08 
+   Comment/s: 
+   TEST DONE TWICE. 
+
+   Uric Acid                                       10.73        mg/dl        M:4.0~8.5               635.33         umol/L M:236.84~503. 
+                                                                                                                               29 
+   SGPT/ALT                                        13           U/L          <42                     13.00          U/L        <42 
+   Sodium                                          138.00       meq/L        135~148                 138.00         mmol/L 135.00~148.00 
+   Potassium                                       4.11         meq/L        3.5~5.0                 4.11           mmol/L 3.50~5.00 
+   Lipid Profile 
+      Cholesterol                                  195.46       mg/dl        <200                    5.02           mmol/L <5.14 
+      Triglycerides                                107.15       mg/dl        10~150                  1.21           mmol/L 0.11~1.70 
+      HDL                                          52.30        mg/dl        M:>55                   1.36           mmol/L M:>1.43 
+      LDL                                          121.73       mg/dl        <130                    3.16           mmol/L <3.38 
+      VLDL                                         21.43        mg/dl        2.00~38.00              0.56           mmol/L 0.05~0.99 
+      CHOL/HDL Ratio                               3.74                      <3.64 
+
+       LEGEND:             - High        11 - Alert Value High                    - Low              - Alert Value Low 
+
+                               CH: 
+                                    JF PRINCESS NIKOLE L. SAGUIN, RMT                                                      GRACE JOY AVILA, M. D., FPSP 
+                                          LIC. #: 0109396                                        MA. LIC. LHYNDY #: 0110162 M. DAÑO PTR:1987810 , LIC. #: 0091151, CTC: 11273706 
+                    REGISTERED MEDICAL TECHNOLOGIST                                         QUALITY CONTROL                 PATHOLOGIST 
+                                                    ** Report Electronically Signed Out ** 
+                                                                      HPD 
+<<<

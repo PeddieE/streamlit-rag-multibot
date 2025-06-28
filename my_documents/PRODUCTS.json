@@ -1,0 +1,92 @@
+[
+  {
+    "product_id": "ELC001",
+    "name": "Smart LED TV 55-inch",
+    "category": "Electronics",
+    "brand": "TechVision",
+    "price_usd": 799.99,
+    "in_stock": true,
+    "specifications": {
+      "display_type": "LED",
+      "screen_size_inches": 55,
+      "resolution": "4K UHD",
+      "smart_features": ["Voice Control", "Streaming Apps", "Built-in Chromecast"],
+      "ports": {"HDMI": 3, "USB": 2, "Ethernet": 1}
+    },
+    "description": "Immersive 4K experience with smart features and sleek design. Perfect for your living room.",
+    "faq": [
+      {"question": "Does it support HDR?", "answer": "Yes, it supports HDR10 and HLG."},
+      {"question": "What is the warranty period?", "answer": "1-year limited warranty."},
+      {"question": "Can I mount it on a wall?", "answer": "Yes, it is VESA mount compatible (200x200mm)."}
+    ]
+  },
+  {
+    "product_id": "CLT010",
+    "name": "Men's Classic Denim Jacket",
+    "category": "Apparel",
+    "brand": "UrbanWear",
+    "price_usd": 65.00,
+    "in_stock": true,
+    "available_sizes": ["S", "M", "L", "XL"],
+    "material": "100% Cotton",
+    "color": "Dark Blue",
+    "description": "Durable and stylish denim jacket for everyday wear. A timeless addition to any wardrobe.",
+    "faq": [
+      {"question": "Is it machine washable?", "answer": "Yes, machine wash cold with similar colors. Tumble dry low."},
+      {"question": "What's the return policy?", "answer": "30-day free returns with original tags."},
+      {"question": "Does it run true to size?", "answer": "Generally, yes. We recommend checking our size chart for best fit."}
+    ]
+  },
+  {
+    "product_id": "HGA005",
+    "name": "Smart Coffee Maker",
+    "category": "Home Appliances",
+    "brand": "BrewMaster",
+    "price_usd": 129.50,
+    "in_stock": false,
+    "estimated_restock_date": "2025-07-15",
+    "specifications": {
+      "capacity_cups": 12,
+      "connectivity": ["Wi-Fi", "Bluetooth"],
+      "features": ["Programmable Timer", "Automatic Shut-off", "Keep Warm Function"],
+      "material": "Stainless Steel & BPA-Free Plastic"
+    },
+    "description": "Brew your perfect cup from anywhere with this Wi-Fi enabled smart coffee maker.",
+    "faq": [
+      {"question": "Is it compatible with Google Home?", "answer": "Yes, it integrates seamlessly with Google Home and Amazon Alexa."},
+      {"question": "What kind of coffee grounds does it use?", "answer": "It uses standard ground coffee."}
+    ]
+  },
+  {
+    "product_id": "BKS003",
+    "name": "Sci-Fi Novel: 'Galactic Odyssey'",
+    "category": "Books",
+    "brand": "FutureReads Publishing",
+    "price_usd": 15.99,
+    "in_stock": true,
+    "author": "Anya Sharma",
+    "format": "Paperback",
+    "page_count": 420,
+    "description": "A thrilling journey through distant galaxies and ancient civilizations. A must-read for sci-fi fans.",
+    "faq": [
+      {"question": "Is this part of a series?", "answer": "Yes, it's the first book in the 'Cosmic Chronicles' series."},
+      {"question": "Is an e-book version available?", "answer": "Yes, the e-book is available on our digital store."}
+    ]
+  },
+  {
+    "product_id": "SPO012",
+    "name": "Professional Yoga Mat",
+    "category": "Sports & Outdoors",
+    "brand": "FlexFit",
+    "price_usd": 39.00,
+    "in_stock": true,
+    "material": "Eco-friendly TPE",
+    "thickness_mm": 6,
+    "colors_available": ["Blue", "Purple", "Black"],
+    "description": "Non-slip and durable yoga mat for all levels of practice. Comes with a carrying strap.",
+    "faq": [
+      {"question": "How do I clean the mat?", "answer": "Wipe with a damp cloth and mild soap. Air dry."},
+      {"question": "Is it suitable for hot yoga?", "answer": "Yes, its non-slip surface is effective even with sweat."}
+    ]
+  }
+]

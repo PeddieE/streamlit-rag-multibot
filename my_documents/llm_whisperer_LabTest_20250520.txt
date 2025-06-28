@@ -1,0 +1,88 @@
+
+
+                                   HI -PRECISION                                           diagnostics 
+                                   ONLINE                           RESULT 
+
+Name         : EATA, SIEGFRIED MANUEL REQUILME                                              Lab. Number           : 2562015344 
+PID           : CW4169126                                                                   Birthdate             : 08-10-1966 
+Age          : 58                    Sex : MALE                                             Dispatch              : 
+Source        : HPD-CONSOLACION (WALK-IN)                                                   Page                  : 1 of 2 
+Clinician : DR. PATRICK JORDAN LIM 
+
+Date Requested         : 05-20-2025 06:19 AM 
+
+ Test                                                 Results                               Unit                    Reference Interval 
+
+ HEMATOLOGY 
+ Complete Blood Count 
+    White Blood Cells                                 6.7                                   10^9/L                 4.00~10.50 
+    Red Blood Cells                                   4.38                                  10^12/L                4.70~6.00 
+    Hemoglobin                                        143                                   g/L                     135~180 
+    Hematocrit                                        0.41                                                         0.42~0.52 
+    Mean Corpuscular Volume                           93                                    fL                     78~100 
+    Mean Corpuscular Hb                               33                                    pg                     27~31 
+    Mean Corpuscular Hb Conc.                         0.35                                                         0.32~0.36 
+    RBC Distribution Width                            11.6                                  %                       11.0~16.0 
+    Platelet Count                                    244                                   10^9/L                  150~450 
+    Diff. Count (Relative) 
+      Segmenters / Neutrophils                        62.0                                  %                      50.0~70.0 
+      Lymphocytes                                     26.4                                  %                       18.0~42.0 
+      Monocytes                                       7.9                                   %                      2.0~11.0 
+      Eosinophils                                     2.7                                   %                      0.0~6.0 
+      Basophils                                       1.0                                   %                      0.0~2.0 
+      Bands                                           0.00                                  %                      0.0~5.0 
+    Diff. Count (Absolute) 
+      Absolute Seg/Neutro Count                       4.15                                  10^9/L                  1.30~6.00 
+      Absolute Lymphocyte Count                       1.77                                  10^9/L                  1.50~3.50 
+      Absolute Monocyte Count                         0.53                                  10^9/L                 <1.00 
+      Absolute Eosinophil Count                       0.18                                  10^9/L                 <0.70 
+      Absolute Basophil Count                         0.07                                  10^9/L                 <0.10 
+      Absolute Band Count                             0.00                                  10^9/L                 <1.00 
+
+        LEGEND:              - High         11 - Alert Value High                       - Low              - Alert Value Low 
+
+                                 HM: 
+                                        CARYL GRACE E. SINADJAN, RMT                                                              GRACE JOY &. AVILA, M. D. , FPSP 
+                                             LIC. #: 092662                                        ALAIN CHRISTIAN LIC. #: 0126262 FUENTES, RMT PTR:1987810 , LIC. #: 0091151, CTC:11273706 
+                      REGISTERED MEDICAL TECHNOLOGIST                                             QUALITY CONTROL                  PATHOLOGIST 
+                                                        ** Report Electronically Signed Out ** 
+                                                                          HPD 
+<<<
+
+                                   HI-PRECISION                                            diagnostics 
+                                   ONLINE                           RESULT 
+
+Name         : EATA, SIEGFRIED MANUEL REQUILME                                              Lab. Number            2562015344 
+PID           : CW4169126                                                                   Birthdate             : 08-10-1966 
+Age           : 58                   Sex : MALE                                             Dispatch              : 
+Source        : HPD-CONSOLACION (WALK-IN)                                                   Page                  : 2 of 2 
+Clinician : DR. PATRICK JORDAN LIM 
+
+Date Requested         : 05-20-2025 06:19 AM 
+
+                                                                 Conventional                                               SI 
+   TEST                                               RESULT        UNIT          Reference Interval       RESULT          UNIT       Reference Interval 
+
+   CHEMISTRY 
+    Microalbumin/Creat Ratio 
+       Urine Creatinine                               126.90        mg/dl 
+       Microalbumin                                   38.55         mg/L 
+       Albumin/Creat Ratio                            30.38         mgMAlb/gCre 
+       Comment/s: 
+      Normal Value: < 30 
+
+    eGFR CKD-EPI (2021)                               34                          mL/min/1.73m2 
+    Blood Urea Nitrogen                               24.40         mg/dl         8.00~23.00               8.71            mmol/L 2.86~8.21 
+    Creatinine                                        2.21          mg/dl         0.60~1.20                195.36          umol/L 53.04~106.08 
+    Potassium                                         4.63          meq/L         3.5~5.0                  4.63            mmol/L 3.50~5.00 
+    CO2                                               19.96         meq/L         22~30                    19.96           mmol/L 22.00~30.00 
+
+        LEGEND:              - High         11 - Alert Value High                      - Low               - Alert Value Low 
+
+                                 CH:            $ 
+                                           LENCY DIANNE A. DY, RMT                                                                GRACE JOY AVILA, M. D. , FPSP 
+                                             LIC. #: 0106924                                       ALAIN CHRISTIAN LIC. #: 0126262 FUENTES, RMT PTR:1987810 ,LIC. #: 0091151, CTC: 11273706 
+                      REGISTERED MEDICAL TECHNOLOGIST                                             QUALITY CONTROL                  PATHOLOGIST 
+                                                        ** Report Electronically Signed Out ** 
+                                                                          HPD 
+<<<

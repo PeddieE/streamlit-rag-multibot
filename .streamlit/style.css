@@ -1,0 +1,23 @@
+/* .streamlit/style.css */
+
+/* --- NEW RULE TO LIFT THE CHAT INPUT --- */
+[data-testid="stChatInput"] {
+    /*bottom: 60px !important;*/ /* Adjust this value! This is footer height + some margin */
+    bottom: 55px !important; /* Adjust this value! This is footer height + some margin */
+    }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f2f6; /* Streamlit's default background color */
+    color: gray;
+    text-align: center;
+    padding: 10px 0; /* This padding within the footer itself */
+    font-size: small;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    z-index: 999;
+}
+

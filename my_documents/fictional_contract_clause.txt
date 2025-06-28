@@ -1,0 +1,9 @@
+Article 7: Confidentiality Obligations
+
+7.1 Definition of Confidential Information: "Confidential Information" shall mean any and all non-public information, whether commercial, financial, technical, operational, strategic, or otherwise, related to Party A's business, products, services, customers, research, or development efforts, disclosed directly or indirectly by Party A to Party B, whether orally, visually, in writing, or in electronic form. This includes, but is not limited to, trade secrets, proprietary software, business plans, financial data, customer lists, and marketing strategies.
+
+7.2 Obligations of Party B: Party B agrees to maintain the strict confidentiality of all Confidential Information received from Party A. Party B shall not, without the prior written consent of Party A, disclose, reproduce, or use any Confidential Information for any purpose other than the fulfillment of the specific objectives outlined in the primary agreement dated [Insert Date of Primary Agreement]. Party B shall protect the Confidential Information with the same degree of care it uses to protect its own proprietary information, but in no event less than a reasonable degree of care.
+
+7.3 Permitted Disclosures: Notwithstanding Section 7.2, Party B may disclose Confidential Information to its employees, agents, or subcontractors who have a need to know such information for the purposes of the primary agreement, provided that such individuals are bound by confidentiality obligations at least as stringent as those set forth herein.
+
+7.4 Return or Destruction: Upon termination or expiration of the primary agreement, or upon Party A's written request, Party B shall promptly return to Party A or destroy all Confidential Information (and all copies thereof) in its possession, custody, or control.

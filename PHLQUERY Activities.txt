@@ -1,0 +1,18 @@
+
+Project Activities - Phil History
+
+Note: pip list | findstr bs4 <-- to check if the library bs4 has been installed
+
+1) Set up the virtual environment
+       conda create -p venv python==3.10 -y
+
+2) Create requirements.txt containing the ff:
+       langchain (and other libraries)
+
+3) Activate the virtual environment
+       conda activate venv/
+
+4) Type: pip install -r requirements.txt
+
+5) Transform data: Convert docs into chunks of text
+   

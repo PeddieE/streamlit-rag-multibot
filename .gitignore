@@ -1,0 +1,16 @@
+.env
+__pycache__/
+*.pyc
+
+#ChromaDB database files
+chroma_db/
+
+#Other common temporary/generated files
+.DS_Store
+Thumbs.db
+venv/
+.venv/
+*.log
+*.db
+*.sqlite3
+

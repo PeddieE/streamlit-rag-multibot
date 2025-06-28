@@ -1,0 +1,19 @@
+I. Purpose and Scope
+
+The Digital Innovation Act of 2025 ("DIA 2025") is a fictional legislative framework enacted by the Republic of Cyberton to foster secure and ethical digital development while protecting consumer data rights. It applies to any entity, domestic or foreign, that collects, processes, or stores the personal data of Cybertonian citizens or operates digital services within the Republic's jurisdiction, generating annual revenue exceeding 100,000 Cybertonian Credits from such activities.
+
+II. Key Provisions
+
+Data Minimization (Section 3.1): Entities are required to collect only the minimum amount of personal data necessary for their stated purpose and must clearly articulate this purpose to the data subject.
+
+Consent Mechanisms (Section 4.5): Requires explicit, unambiguous consent for the collection and processing of sensitive personal data. Consent mechanisms must be easily accessible and understandable, allowing for withdrawal at any time.
+
+Data Portability Rights (Section 5.2): Grants citizens the right to receive their personal data in a structured, commonly used, and machine-readable format, and to transmit that data to another service provider without hindrance.
+
+Automated Decision-Making Oversight (Section 6.3): Mandates human oversight for any significant decisions affecting individuals that are solely based on automated processing, including profiling, where such decisions produce legal effects or similarly significant impacts. Entities must provide clear explanations of the logic involved in such decisions.
+
+Security Incident Reporting (Section 8.1): Requires prompt notification to the Cybertonian Data Protection Authority and affected individuals of any data breach or security incident that poses a significant risk to personal data, within 72 hours of becoming aware of the incident.
+
+III. Enforcement and Penalties
+
+The Cybertonian Data Protection Authority (CDPA) is empowered to enforce DIA 2025. Non-compliance may result in administrative fines of up to 2% of an entity's global annual turnover or 5 million Cybertonian Credits, whichever is higher, for serious infringements. Lesser infringements may incur warnings, reprimands, or smaller fines.

@@ -1,16 +1,18 @@
 ProductID,ProductName,Category,Quantity_In_Stock,Unit_Cost_USD,Supplier,Reorder_Level,Last_Restock_Date,Warehouse_Location
-INV001,Laptop Pro X,Electronics,50,1200.50,TechSuppliers Inc,20,2025-06-15,Aisle 3, Shelf B
-INV002,Ergonomic Mouse,Peripherals,200,25.75,Global Gadgets,100,2025-06-20,Aisle 5, Bin 12
-INV003,Mechanical Keyboard,Peripherals,80,85.00,KeyMaster Co,30,2025-06-10,Aisle 5, Bin 15
-INV004,27-inch Monitor,Electronics,30,350.00,DisplaySolutions,15,2025-06-01,Aisle 4, Rack C
-INV005,USB-C Hub 7-in-1,Accessories,150,40.00,ConnectAll Ltd,75,2025-06-25,Aisle 6, Drawer 7
-INV006,Wireless Earbuds,Audio,120,70.00,SoundWave Ent,50,2025-06-18,Aisle 7, Compartment 3
-INV007,Portable SSD 1TB,Storage,70,99.99,DataVault Corp,25,2025-06-12,Aisle 8, Slot 2
-INV008,Webcam HD 1080p,Peripherals,90,45.50,VisionPro Gear,40,2025-06-05,Aisle 5, Bin 10
-INV009,Printer Ink Cartridge (Black),Consumables,300,18.25,PrintFast Supplies,150,2025-06-28,Aisle 1, Shelf A
-INV010,A4 Copy Paper (Ream),Consumables,500,5.99,Office Essentials,200,2025-06-29,Aisle 1, Shelf C
-INV011,External Hard Drive 2TB,Storage,40,110.00,DataVault Corp,15,2025-06-08,Aisle 8, Slot 5
-INV012,Gaming Headset,Audio,60,115.00,SoundWave Ent,25,2025-06-22,Aisle 7, Compartment 5
-INV013,Docking Station,Accessories,45,150.00,ConnectAll Ltd,20,2025-06-17,Aisle 6, Drawer 8
-INV014,Smartphone Stand,Accessories,250,12.00,MobileMates,100,2025-06-03,Aisle 6, Drawer 1
-INV015,Security Camera Indoor,Electronics,25,89.99,SecureView Systems,10,2025-06-26,Aisle 4, Rack D
+INV001,Laptop Pro X,Electronics,50,1200.5,TechSuppliers Inc,20,15/06/2025,Aisle 3
+INV002,Ergonomic Mouse,Peripherals,200,25.75,Global Gadgets,100,20/06/2025,Aisle 5
+INV003,Mechanical Keyboard,Peripherals,80,85,KeyMaster Co,30,10/06/2025,Aisle 5
+INV004,27-inch Monitor,Electronics,30,350,DisplaySolutions,15,01/06/2025,Aisle 4
+INV005,USB-C Hub 7-in-1,Accessories,150,40,ConnectAll Ltd,75,25/06/2025,Aisle 6
+INV006,Wireless Earbuds,Audio,120,70,SoundWave Ent,50,18/06/2025,Aisle 7
+INV007,Portable SSD 1TB,Storage,70,99.99,DataVault Corp,25,12/06/2025,Aisle 8
+INV008,Webcam HD 1080p,Peripherals,90,45.5,VisionPro Gear,40,05/06/2025,Aisle 5
+INV009,Printer Ink Cartridge (Black),Consumables,300,18.25,PrintFast Supplies,150,28/06/2025,Aisle 1
+INV010,A4 Copy Paper (Ream),Consumables,500,5.99,Office Essentials,200,29/06/2025,Aisle 1
+INV011,External Hard Drive 2TB,Storage,40,110,DataVault Corp,15,08/06/2025,Aisle 8
+INV012,Gaming Headset,Audio,60,115,SoundWave Ent,25,22/06/2025,Aisle 7
+INV013,Docking Station,Accessories,45,150,ConnectAll Ltd,20,17/06/2025,Aisle 6
+INV014,Smartphone Stand,Accessories,250,12,MobileMates,100,03/06/2025,Aisle 6
+INV015,Security Camera Indoor,Electronics,25,89.99,SecureView Systems,10,26/06/2025,Aisle 4
+INV016,Monitor 12 inches,Electronics,8,89.99,SecureView Systems,10,26/06/2025,Aisle 10
+INV017,Monitor 14 inches,Electronics,15,89.99,SecureView Systems,20,26/06/2025,Aisle 11

@@ -75,7 +75,7 @@ langchain==0.3.26
 langchain-chroma==0.2.4
 langchain-community==0.3.27
 langchain-core==0.3.68
-langchain-groq==0.1.10
+langchain-groq
 langchain-openai==0.3.27
 langchain-text-splitters==0.3.8
 langdetect==1.0.9

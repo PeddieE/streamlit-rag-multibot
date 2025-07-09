@@ -80,7 +80,7 @@ def get_inventory_dataframe(csv_path: Path):
 
 def setup_rag_pipeline(chatbot_name: str):
     llm = ChatOpenAI(model_name="gpt-4o", temperature=0) # Using gpt-4o as default
-    embeddings = OpenAIEmbededs()
+    embeddings = OpenAIEmbeddings()()
 
     # Determine document paths
     doc_paths = CHATBOT_DOCUMENTS.get(chatbot_name)

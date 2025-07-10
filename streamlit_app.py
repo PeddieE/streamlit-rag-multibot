@@ -29,9 +29,9 @@ st.markdown("Select a specialized chatbot from the sidebar and ask your question
 st.info("The knowledge bases for each chatbot are built from your local documents.")
 
 # --- Session State Initialization ---
-# This ensures that the RAG chains and chat history persist across reruns
-if 'rag_chains' not in st.session_state:
-    st.session_state['rag_chains'] = {}
+# This ensures that the RAG chains/Agents and chat history persist across reruns
+if 'rag_pipelines' not in st.session_state: # Renamed from 'rag_chains' for clarity
+    st.session_state['rag_pipelines'] = {}
 if 'current_chatbot_name' not in st.session_state:
     st.session_state['current_chatbot_name'] = None
 if 'messages' not in st.session_state:
@@ -44,8 +44,6 @@ with st.sidebar:
 
     available_chatbots = sorted(list(CHATBOT_DOCUMENTS.keys())) # Sort for consistent display
 
-    # Add a "None" or "Select a Chatbot" option
-    # UPDATED: Changed "History" to "Philippine History" in display
     display_options = ["Select a Chatbot"] + \
                       [
                           "Philippine History" if bot == "history" else bot.capitalize()
@@ -61,7 +59,6 @@ with st.sidebar:
     # Convert display name back to internal lowercase name
     selected_chatbot_name_internal = None
     if selected_chatbot_display != "Select a Chatbot":
-        # UPDATED: Handle "Philippine History" to "history" mapping for internal use
         if selected_chatbot_display == "Philippine History":
             selected_chatbot_name_internal = "history"
         else:
@@ -74,17 +71,17 @@ with st.sidebar:
         st.session_state['messages'] = [] # Clear chat history when switching chatbots
         st.toast(f"Switched to {selected_chatbot_display} Chatbot!")
 
-        # Load or setup the RAG pipeline for the selected chatbot
-        if selected_chatbot_name_internal not in st.session_state['rag_chains']:
+        # Load or setup the RAG pipeline/Agent for the selected chatbot
+        if selected_chatbot_name_internal not in st.session_state['rag_pipelines']: # Refer to new session state key
             with st.spinner(f"Setting up {selected_chatbot_display} chatbot... This may take a moment for the first time."):
-                pipeline_components = setup_rag_pipeline(selected_chatbot_name_internal)
-                if pipeline_components and isinstance(pipeline_components, tuple) and len(pipeline_components) == 2:
-                    # Store the entire tuple in session state
-                    st.session_state['rag_chains'][selected_chatbot_name_internal] = pipeline_components
+                # setup_rag_pipeline now returns a single chain/agent, not a tuple
+                pipeline = setup_rag_pipeline(selected_chatbot_name_internal)
+                if pipeline: # Check if the pipeline object was successfully returned
+                    st.session_state['rag_pipelines'][selected_chatbot_name_internal] = pipeline # Store the single object
                     st.success(f"{selected_chatbot_display} chatbot ready!")
                     st.session_state['messages'].append({"role": "assistant", "content": f"Hello! I am the {selected_chatbot_display} Chatbot. How can I assist you today?"})
                 else:
-                    st.error(f"Failed to set up {selected_chatbot_display} chatbot. Please check your document files in '{DOCUMENTS_DIRECTORY}'.")
+                    st.error(f"Failed to set up {selected_chatbot_display} chatbot. Please check your document files in '{DOCUMENTS_DIRECTORY}' and API key.")
                     st.session_state['current_chatbot_name'] = None # Reset if setup fails
         else:
             # If already loaded, just set the initial message
@@ -99,16 +96,12 @@ with st.sidebar:
 if st.session_state['current_chatbot_name']:
     st.subheader(f"Chat with the {st.session_state['current_chatbot_name'].capitalize()} Chatbot")
 
-    # Get the tuple (rag_chain, inventory_agent) from session state
-    # This variable 'current_pipeline_tuple' now holds (rag_chain, inventory_agent)
-    current_pipeline_tuple = st.session_state['rag_chains'].get(st.session_state['current_chatbot_name'])
+    # Retrieve the active pipeline (which could be a RAG chain or an AgentExecutor)
+    # This will be the single object returned by setup_rag_pipeline
+    current_pipeline = st.session_state['rag_pipelines'].get(st.session_state['current_chatbot_name'])
 
-    # --- CRITICAL CHANGE: UNPACK THE TUPLE HERE ---
-    if current_pipeline_tuple: # Ensure the tuple exists
-        current_rag_chain, current_inventory_agent = current_pipeline_tuple
-    # Now current_rag_chain is your chain object and current_inventory_agent is your agent object (or None)
-
-    # Display chat messages from history on app rerun
+    if current_pipeline: # Ensure the pipeline object exists
+        # Display chat messages from history on app rerun
         for message in st.session_state['messages']:
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
@@ -122,81 +115,63 @@ if st.session_state['current_chatbot_name']:
             with st.chat_message("assistant"):
                 with st.spinner("Thinking..."):
                     try:
-                        ai_response = "I couldn't get a response." # Default message
+                        ai_response_content = "I couldn't get a response." # Default message
                         source_docs_display = [] # Initialize a list to hold source docs for display
-                        was_rag_used = False # Initialize the flag
+                        was_rag_used = False # Initialize the flag (will be true if a RAG chain's context is available)
 
-                        # --- ROUTING LOGIC BASED ON CHATBOT NAME ---
-                        if st.session_state['current_chatbot_name'] == "inventory" and current_inventory_agent:
-                            # UPDATED CONDITION for better routing to the agent
-                            if "stock on hand lesser than or equal to reorder level" in prompt.lower() or \
-                               "inventory data" in prompt.lower() or \
-                               "stock details" in prompt.lower() or \
-                               "product information" in prompt.lower() or \
-                               any(word in prompt.lower() for word in [
-                                   "what is the total", "how many", "count", "sum", "average", "value of",
-                                   "cheapest", "most expensive", "stock level", "highest", "lowest",
-                                   "max", "min", "list all", "show all", "all products", "display all",
-                                   "lesser than", "greater than", "equal to", "less than", "greater than or equal",
-                                   "greater than", "less than or equal", "find products", "products with", "inventory level",
-                                   "data for", "report for", "calculate", "give me the" # Added more general terms
-                               ]):
-                                print("DEBUG: Routing to Inventory Agent.")
-                                agent_response = current_inventory_agent.invoke({"input": prompt})
-                                ai_response = agent_response.get('output', str(agent_response))
-                                # For agent responses, was_rag_used remains False (correct)
-                            else: # Routing to Inventory RAG Chain for descriptive info
-                                print("DEBUG: Routing to Inventory RAG Chain (fallback).")
-                                response_rag = current_rag_chain.invoke({"input": prompt})
-                                ai_response = response_rag["answer"]
-                                source_docs_display = response_rag.get("context", []) # <-- Changed to 'context' here
-                                was_rag_used = True # Set flag only when RAG is actually used
-                        else: # For all other chatbots (medical, history, finance, legal) or if inventory agent isn't available
-                            print(f"DEBUG: Routing to RAG Chain for {st.session_state['current_chatbot_name']}.")
-                            response = current_rag_chain.invoke({"input": prompt})
-                            ai_response = response["answer"]
-                            source_docs_display = response.get("context", []) # <-- Changed to 'context' here
-                            was_rag_used = True # Set flag when RAG is used for other bots
+                        # Invoke the pipeline. The AgentExecutor (for inventory) will handle routing internally.
+                        # For other chatbots, current_pipeline is simply the rag_chain.
+                        response_obj = current_pipeline.invoke({"input": prompt})
+
+                        # --- Handling different response formats (AgentExecutor vs. RAG Chain) ---
+                        if isinstance(response_obj, dict):
+                            # AgentExecutor's final answer is typically in 'output'
+                            if 'output' in response_obj:
+                                ai_response_content = response_obj['output']
+                            # RAG chain's answer is typically in 'answer'
+                            elif 'answer' in response_obj:
+                                ai_response_content = response_obj['answer']
+                                source_docs_display = response_obj.get("context", []) # Source docs for RAG
+                                was_rag_used = True
+                            else: # Fallback for unexpected dict structure
+                                ai_response_content = str(response_obj) # Convert dict to string for display
+                                print(f"DEBUG: Unexpected dictionary response structure: {response_obj}")
+                        elif isinstance(response_obj, str): # Direct string response (less common with current LangChain versions)
+                            ai_response_content = response_obj
+                            print(f"DEBUG: Direct string response received: {response_obj}")
+                        else:
+                            ai_response_content = "Unexpected response format from the chatbot."
+                            print(f"DEBUG: Unexpected response type: {type(response_obj)} - Value: {response_obj}")
+
 
                         # --- DEBUG PRINTS START ---
-                        # These will print to your terminal (command prompt)
-                        print(f"\n--- DEBUG: RAG Response Info for '{st.session_state['current_chatbot_name'].capitalize()}' ---")
-                        print(f"DEBUG: Answer: {ai_response[:100]}...") # Print first 100 chars of answer
-                        print(f"DEBUG: was_rag_used: {was_rag_used}")
+                        print(f"\n--- DEBUG: Final Response Info for '{st.session_state['current_chatbot_name'].capitalize()}' ---")
+                        print(f"DEBUG: Answer: {ai_response_content[:100]}...") # Print first 100 chars of answer
+                        print(f"DEBUG: was_rag_used: {was_rag_used}") # True if RAG chain was used AND it returned context
 
-                        # Only attempt to print source document info if RAG was actually used
-                        if was_rag_used:
-                            print(f"DEBUG: Source Documents Type from response: {type(response.get('context'))}")
+                        if was_rag_used and source_docs_display:
                             print(f"DEBUG: Number of Source Docs in source_docs_display: {len(source_docs_display)}")
-                            if source_docs_display:
-                                print(f"DEBUG: First Source Doc Metadata: {source_docs_display[0].metadata}")
+                            print(f"DEBUG: First Source Doc Metadata: {source_docs_display[0].metadata}")
                         else:
-                            # For agent-based responses, there are no 'source_documents' in the same RAG sense
-                            print("DEBUG: Not a RAG-based response (likely Agent). No source document info to display.")
-
+                            print("DEBUG: No RAG context available (either not RAG, or no relevant docs found).")
                         print("----------------------------------------------------------------")
                         # --- DEBUG PRINTS END ---
 
                         # --- DISPLAY THE AI ANSWER ---
-                        # This displays the answer within the current assistant chat bubble
-                        st.markdown(f"**Answer:** {ai_response}")
-                        # Append the answer to the chat history so it persists
-                        st.session_state['messages'].append({"role": "assistant", "content": ai_response})
+                        st.markdown(f"**Answer:** {ai_response_content}")
+                        st.session_state['messages'].append({"role": "assistant", "content": ai_response_content})
 
-                        # --- CONSOLIDATED SOURCE DOCUMENT DISPLAY (COMMENTED OUT) ---
+                        # --- CONSOLIDATED SOURCE DOCUMENT DISPLAY (UNCOMMENT TO SHOW) ---
                         # If you want to show source documents again, uncomment this entire block.
                         # For now, it's suppressed to provide a cleaner answer-only output.
-                        # st.markdown("\n\n") # Add two blank lines for vertical space
-                        # if source_docs_display:
+                        # if was_rag_used and source_docs_display:
                         #     st.markdown("---") # Separator for clarity
-                        #     st.markdown("### **Retrieved Source Documents for RAG:**") # Made heading more prominent and generic
+                        #     st.markdown("### **Retrieved Source Documents for RAG:**") 
                         #     for i, doc in enumerate(source_docs_display):
                         #         st.text(f"--- Document {i+1} ---")
-                        #         # Adjust language based on doc.metadata.get('file_type') if you have it
                         #         st.code(doc.page_content, language="json" if ".json" in doc.metadata.get('source', '') else ("csv" if ".csv" in doc.metadata.get('source', '') else "text"))
-                        # # --- Display "No relevant source documents" message if RAG was used AND no documents were retrieved ---
                         # elif was_rag_used and not source_docs_display:
-                        #     st.info(f"No relevant source documents were retrieved by {st.session_state['current_chatbot_name'].capitalize()} RAG for this query.")
+                        #      st.info(f"No relevant source documents were retrieved by {st.session_state['current_chatbot_name'].capitalize()} RAG for this query.")
                         # --- END CONSOLIDATED SOURCE DOCUMENT DISPLAY ---
 
                     except Exception as e:
@@ -205,13 +180,12 @@ if st.session_state['current_chatbot_name']:
                         print(f"ERROR: Exception during query processing: {e}") # This will print to terminal
                         import traceback; traceback.print_exc() # Temporarily uncomment this for a full stack trace if an unexpected error occurs
                         st.session_state['messages'].append({"role": "assistant", "content": error_message})
-    else: # This 'else' block executes if current_pipeline_tuple is None (meaning setup failed)
+    else: # This 'else' block executes if current_pipeline is None (meaning setup failed)
         st.warning("Failed to load chatbot components. Please try re-selecting the chatbot or check your setup.")
 else: # This 'else' block executes if no chatbot is currently selected from the sidebar
     st.info("Choose a chatbot from the sidebar to begin!")
 
 # --- FOOTER HTML (This remains at the very end of your file) ---
-# This uses Streamlit's st.html to inject raw HTML for the fixed footer.
 st.html(
     """
     <div class="footer">
